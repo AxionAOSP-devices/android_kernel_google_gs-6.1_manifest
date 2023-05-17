@@ -21,13 +21,8 @@
   <project path="build/bazel_common_rules" name="platform/build/bazel_common_rules" remote="aosp" />
   <project path="build/kernel" name="kernel/build" remote="aosp">
     <linkfile dest="tools/bazel" src="kleaf/bazel.sh" />
-    <linkfile dest="build/build.sh" src="build.sh" />
-    <linkfile dest="build/build_abi.sh" src="build_abi.sh" />
     <linkfile dest="build/build_test.sh" src="build_test.sh" />
-    <linkfile dest="build/build_utils.sh" src="build_utils.sh" />
     <linkfile dest="build/config.sh" src="config.sh" />
-    <linkfile dest="build/envsetup.sh" src="envsetup.sh" />
-    <linkfile dest="build/_setup_env.sh" src="_setup_env.sh" />
     <linkfile dest="build/multi-switcher.sh" src="multi-switcher.sh" />
     <linkfile dest="build/abi" src="abi" />
     <linkfile dest="build/static_analysis" src="static_analysis" />
