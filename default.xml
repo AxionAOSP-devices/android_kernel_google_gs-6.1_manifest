@@ -23,9 +23,6 @@
     <linkfile dest="tools/bazel" src="kleaf/bazel.sh" />
     <linkfile dest="build/build_test.sh" src="build_test.sh" />
     <linkfile dest="build/config.sh" src="config.sh" />
-    <linkfile dest="build/multi-switcher.sh" src="multi-switcher.sh" />
-    <linkfile dest="build/abi" src="abi" />
-    <linkfile dest="build/static_analysis" src="static_analysis" />
   </project>
   <project path="external/bazel-skylib" name="platform/external/bazel-skylib" remote="aosp" />
   <project path="external/python/absl-py" name="platform/external/python/absl-py" remote="aosp" />
