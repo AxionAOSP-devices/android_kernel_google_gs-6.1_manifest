@@ -21,8 +21,6 @@
   <project path="build/bazel_common_rules" name="platform/build/bazel_common_rules" remote="aosp" />
   <project path="build/kernel" name="kernel/build" remote="aosp">
     <linkfile dest="tools/bazel" src="kleaf/bazel.sh" />
-    <linkfile dest="build/build_test.sh" src="build_test.sh" />
-    <linkfile dest="build/config.sh" src="config.sh" />
   </project>
   <project path="external/bazel-skylib" name="platform/external/bazel-skylib" remote="aosp" />
   <project path="external/python/absl-py" name="platform/external/python/absl-py" remote="aosp" />
