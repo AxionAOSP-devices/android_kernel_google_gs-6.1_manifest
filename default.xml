@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <remote  name="github"
+           fetch=".."
+           review="review.lineageos.org" />
+
+  <remote  name="aosp"
+           fetch="https://android.googlesource.com"
+           review="android-review.googlesource.com"
+           revision="refs/tags/android-16.0.0_r0.0" />
+
+  <default revision="refs/heads/lineage-23.0"
+           remote="github"
+           sync-c="true"
+           sync-j="4" />
+
+  <project path="aosp" name="kernel/common" remote="aosp">
+    <linkfile dest="common/build.config.constants" src="build.config.constants" />
+    <linkfile dest="common/modules.bzl" src="modules.bzl" />
+  </project>
+  <project path="build/bazel_common_rules" name="platform/build/bazel_common_rules" remote="aosp" />
+  <project path="build/kernel" name="kernel/build" remote="aosp">
+    <linkfile dest="tools/bazel" src="kleaf/bazel.sh" />
+    <linkfile dest="build/build.sh" src="build.sh" />
+    <linkfile dest="build/build_abi.sh" src="build_abi.sh" />
+    <linkfile dest="build/build_test.sh" src="build_test.sh" />
+    <linkfile dest="build/build_utils.sh" src="build_utils.sh" />
+    <linkfile dest="build/config.sh" src="config.sh" />
+    <linkfile dest="build/envsetup.sh" src="envsetup.sh" />
+    <linkfile dest="build/_setup_env.sh" src="_setup_env.sh" />
+    <linkfile dest="build/multi-switcher.sh" src="multi-switcher.sh" />
+    <linkfile dest="build/abi" src="abi" />
+    <linkfile dest="build/static_analysis" src="static_analysis" />
+  </project>
+  <project path="external/bazel-skylib" name="platform/external/bazel-skylib" remote="aosp" />
+  <project path="external/python/absl-py" name="platform/external/python/absl-py" remote="aosp" />
+  <project path="external/stardoc" name="platform/external/stardoc" remote="aosp" />
+  <project path="kernel/configs" name="kernel/configs" remote="aosp" />
+  <project path="prebuilts/bazel/linux-x86_64" name="platform/prebuilts/bazel/linux-x86_64" clone-depth="1" remote="aosp" />
+  <project path="prebuilts/build-tools" name="platform/prebuilts/build-tools" clone-depth="1" remote="aosp" />
+  <project path="prebuilts/clang/host/linux-x86" name="platform/prebuilts/clang/host/linux-x86" clone-depth="1" remote="aosp" />
+  <project path="prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.17-4.8" name="platform/prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.17-4.8" clone-depth="1" remote="aosp" />
+  <project path="prebuilts/jdk/jdk11" name="platform/prebuilts/jdk/jdk11" clone-depth="1" remote="aosp" />
+  <project path="prebuilts/kernel-build-tools" name="kernel/prebuilts/build-tools" clone-depth="1" remote="aosp" />
+  <project path="prebuilts/ndk-r23" name="toolchain/prebuilts/ndk/r23" clone-depth="1" remote="aosp" />
+  <project path="tools/mkbootimg" name="platform/system/tools/mkbootimg" remote="aosp" />
+
+  <project path="private/devices" name="LineageOS/android_kernel_google_gs-6.1_devices">
+    <linkfile dest="WORKSPACE" src="google/common/bazel.WORKSPACE" />
+    <linkfile dest="device.bazelrc" src="google/common/device.bazelrc" />
+    <linkfile dest="update_symbol_list.sh" src="google/common/update_symbol_list.sh" />
+    <linkfile dest="common/BUILD.bazel" src="google/common/kleaf/common.BUILD.bazel" />
+    <linkfile dest="build_gs101.sh" src="google/gs101/build_gs101.sh" />
+    <linkfile dest=".c1.bazelrc" src="google/gs101/device.bazelrc" />
+    <linkfile dest="build_raviole.sh" src="google/raviole/build_raviole.sh" />
+    <linkfile dest=".d1.bazelrc" src="google/raviole/device.bazelrc" />
+    <linkfile dest="build_bluejay.sh" src="google/bluejay/build_bluejay.sh" />
+    <linkfile dest=".d2.bazelrc" src="google/bluejay/device.bazelrc" />
+    <linkfile dest="build_gs201.sh" src="google/gs201/build_gs201.sh" />
+    <linkfile dest=".c2.bazelrc" src="google/gs201/device.bazelrc" />
+    <linkfile dest="build_pantah.sh" src="google/pantah/build_pantah.sh" />
+    <linkfile dest=".d3.bazelrc" src="google/pantah/device.bazelrc" />
+    <linkfile dest="build_lynx.sh" src="google/lynx/build_lynx.sh" />
+    <linkfile dest=".d4.bazelrc" src="google/lynx/device.bazelrc" />
+    <linkfile dest="build_felix.sh" src="google/felix/build_felix.sh" />
+    <linkfile dest=".d5.bazelrc" src="google/felix/device.bazelrc" />
+    <linkfile dest="build_tangorpro.sh" src="google/tangorpro/build_tangorpro.sh" />
+    <linkfile dest=".d6.bazelrc" src="google/tangorpro/device.bazelrc" />
+    <linkfile dest="build_zuma.sh" src="google/zuma/build_zuma.sh" />
+    <linkfile dest=".c3.bazelrc" src="google/zuma/device.bazelrc" />
+    <linkfile dest="build_shusky.sh" src="google/shusky/build_shusky.sh" />
+    <linkfile dest=".d7.bazelrc" src="google/shusky/device.bazelrc" />
+    <linkfile dest="build_akita.sh" src="google/akita/build_akita.sh" />
+    <linkfile dest=".d8.bazelrc" src="google/akita/device.bazelrc" />
+    <linkfile dest="build_zumapro.sh" src="google/zumapro/build_zumapro.sh" />
+    <linkfile dest=".c4.bazelrc" src="google/zumapro/device.bazelrc" />
+    <linkfile dest="build_caimito.sh" src="google/caimito/build_caimito.sh" />
+    <linkfile dest=".d9.bazelrc" src="google/caimito/device.bazelrc" />
+    <linkfile dest="build_comet.sh" src="google/comet/build_comet.sh" />
+    <linkfile dest=".d10.bazelrc" src="google/comet/device.bazelrc" />
+    <linkfile dest="build_tegu.sh" src="google/tegu/build_tegu.sh" />
+    <linkfile dest=".d11.bazelrc" src="google/tegu/device.bazelrc" />
+  </project>
+  <project path="private/google-modules" name="LineageOS/android_kernel_google_gs-6.1_google-modules" />
+</manifest>
