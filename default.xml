@@ -14,18 +14,18 @@
            sync-c="true"
            sync-j="4" />
 
-  <project path="aosp" name="kernel/common" remote="aosp">
+  <project path="aosp" name="kernel/common" remote="aosp" revision="refs/tags/android14-6.1-2025-05_r5">
     <linkfile dest="common/build.config.constants" src="build.config.constants" />
     <linkfile dest="common/modules.bzl" src="modules.bzl" />
   </project>
   <project path="build/bazel_common_rules" name="platform/build/bazel_common_rules" remote="aosp" />
-  <project path="build/kernel" name="kernel/build" remote="aosp">
+  <project path="build/kernel" name="kernel/build" remote="aosp" revision="5c398764a918e5d18510fe9036d79d67578f02cf">
     <linkfile dest="tools/bazel" src="kleaf/bazel.sh" />
   </project>
   <project path="external/bazel-skylib" name="platform/external/bazel-skylib" remote="aosp" />
   <project path="external/python/absl-py" name="platform/external/python/absl-py" remote="aosp" />
   <project path="external/stardoc" name="platform/external/stardoc" remote="aosp" />
-  <project path="kernel/configs" name="kernel/configs" remote="aosp" />
+  <project path="kernel/configs" name="kernel/configs" remote="aosp" revision="bd79f38685cf939ab836dd8ddd2e01506ccff47a" />
   <project path="prebuilts/bazel/linux-x86_64" name="platform/prebuilts/bazel/linux-x86_64" clone-depth="1" remote="aosp" />
   <project path="prebuilts/build-tools" name="platform/prebuilts/build-tools" clone-depth="1" remote="aosp" />
   <project path="prebuilts/clang/host/linux-x86" name="platform/prebuilts/clang/host/linux-x86" clone-depth="1" remote="aosp" />
