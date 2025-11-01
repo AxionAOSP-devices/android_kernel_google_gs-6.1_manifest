@@ -14,7 +14,7 @@
            sync-c="true"
            sync-j="4" />
 
-  <project path="aosp" name="kernel/common" remote="aosp">
+  <project path="aosp" name="AxionAOSP/android_kernel_common">
     <linkfile dest="common/build.config.constants" src="build.config.constants" />
     <linkfile dest="common/modules.bzl" src="modules.bzl" />
   </project>
