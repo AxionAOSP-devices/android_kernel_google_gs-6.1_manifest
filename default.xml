@@ -14,12 +14,12 @@
            sync-c="true"
            sync-j="4" />
 
-  <project path="aosp" name="kernel/common" remote="aosp" revision="refs/tags/android14-6.1-2025-05_r5">
+  <project path="aosp" name="kernel/common" remote="aosp" revision="refs/tags/android14-6.1-2025-08_r8">
     <linkfile dest="common/build.config.constants" src="build.config.constants" />
     <linkfile dest="common/modules.bzl" src="modules.bzl" />
   </project>
   <project path="build/bazel_common_rules" name="platform/build/bazel_common_rules" remote="aosp" />
-  <project path="build/kernel" name="kernel/build" remote="aosp" revision="5c398764a918e5d18510fe9036d79d67578f02cf">
+  <project path="build/kernel" name="kernel/build" remote="aosp" revision="6b755daf3fe8f72535db53518d9271811554c83f">
     <linkfile dest="tools/bazel" src="kleaf/bazel.sh" />
   </project>
   <project path="external/bazel-skylib" name="platform/external/bazel-skylib" remote="aosp" />
