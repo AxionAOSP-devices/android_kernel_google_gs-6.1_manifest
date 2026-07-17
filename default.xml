@@ -36,7 +36,7 @@
   <project path="tools/mkbootimg" name="platform/system/tools/mkbootimg" remote="aosp" />
 
   <project path="manifest" name="LineageOS/android_kernel_google_gs-6.1_manifest" />
-  <project path="private/devices" name="LineageOS/android_kernel_google_gs-6.1_devices">
+  <project path="private/devices" name="AxionAOSP-devices/android_kernel_google_gs-6.1_devices">
     <linkfile dest="WORKSPACE" src="google/common/bazel.WORKSPACE" />
     <linkfile dest="device.bazelrc" src="google/common/device.bazelrc" />
     <linkfile dest="update_symbol_list.sh" src="google/common/update_symbol_list.sh" />
