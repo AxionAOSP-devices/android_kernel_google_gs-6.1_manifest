@@ -19,7 +19,7 @@
     <linkfile dest="common/modules.bzl" src="modules.bzl" />
   </project>
   <project path="build/bazel_common_rules" name="platform/build/bazel_common_rules" remote="aosp" />
-  <project path="build/kernel" name="kernel/build" remote="aosp">
+  <project path="build/kernel" name="AxionAOSP-devices/android_build_kernel">
     <linkfile dest="tools/bazel" src="kleaf/bazel.sh" />
   </project>
   <project path="external/bazel-skylib" name="platform/external/bazel-skylib" remote="aosp" />
